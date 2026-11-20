@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="autoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070d18" />
+      <stop offset="50%" stop-color="#0b172a" />
+      <stop offset="100%" stop-color="#050a12" />
+    </linearGradient>
+
+    <filter id="autoGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="450" fill="url(#autoBg)" />
+
+  <!-- Subtle Network Grid -->
+  <g opacity="0.06" stroke="#10b981" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90" />
+    <line x1="0" y1="180" x2="800" y2="180" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="160" y1="0" x2="160" y2="450" />
+    <line x1="320" y1="0" x2="320" y2="450" />
+    <line x1="480" y1="0" x2="480" y2="450" />
+    <line x1="640" y1="0" x2="640" y2="450" />
+  </g>
+
+  <!-- Top Navigation / Status Bar -->
+  <rect x="25" y="20" width="750" height="46" rx="8" fill="#0f1e33" stroke="#1d3354" stroke-width="1.2" />
+  <!-- Automation Gear / Workflow Icon -->
+  <rect x="42" y="33" width="20" height="20" rx="5" fill="#10b981" />
+  <path d="M46 43 L52 38 L58 43 L52 48 Z" stroke="#ffffff" stroke-width="1.6" fill="none" />
+  <circle cx="52" cy="43" r="2" fill="#ffffff" />
+  <text x="70" y="47" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Automated Workflow &amp; Task Orchestrator</text>
+  <text x="350" y="47" fill="#64748b" font-family="sans-serif" font-size="11">DAG Schedules, Background Workers &amp; Event Triggers</text>
+
+  <!-- Health Badges -->
+  <g transform="translate(565, 30)">
+    <rect x="0" y="0" width="90" height="26" rx="5" fill="#064e3b" fill-opacity="0.6" stroke="#059669" stroke-width="1" />
+    <circle cx="12" cy="13" r="3.5" fill="#34d399" />
+    <text x="22" y="17" fill="#a7f3d0" font-family="monospace" font-size="10" font-weight="600">SCHEDULED</text>
+
+    <rect x="100" y="0" width="98" height="26" rx="5" fill="#1e1b4b" fill-opacity="0.7" stroke="#6366f1" stroke-width="1" />
+    <text x="110" y="17" fill="#c7d2fe" font-family="monospace" font-size="10">Uptime: 99.9%</text>
+  </g>
+
+  <!-- TOP PANEL: DAG Workflow Pipeline Graph -->
+  <g transform="translate(25, 78)">
+    <rect width="750" height="150" rx="8" fill="#0b1728" stroke="#1d3354" stroke-width="1" />
+    <text x="20" y="26" fill="#f1f5f9" font-family="sans-serif" font-size="12" font-weight="600">Directed Acyclic Graph (DAG) Pipeline Execution</text>
+
+    <!-- Pipeline Nodes -->
+    <g transform="translate(25, 50)">
+      <!-- Node 1: Webhook Trigger -->
+      <rect x="0" y="10" width="120" height="48" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2" />
+      <text x="60" y="32" text-anchor="middle" fill="#c7d2fe" font-family="sans-serif" font-size="11" font-weight="700">Webhook Trigger</text>
+      <text x="60" y="46" text-anchor="middle" fill="#818cf8" font-family="monospace" font-size="8.5">POST /events/v2</text>
+
+      <!-- Arrow 1 -->
+      <path d="M 120 34 L 148 34" stroke="#64748b" stroke-width="1.8" stroke-dasharray="3,2" />
+      <polygon points="148,30 155,34 148,38" fill="#64748b" />
+
+      <!-- Node 2: Queue Buffer -->
+      <rect x="155" y="10" width="120" height="48" rx="8" fill="#082f49" stroke="#0284c7" stroke-width="1.2" />
+      <text x="215" y="32" text-anchor="middle" fill="#bae6fd" font-family="sans-serif" font-size="11" font-weight="700">Task Queue</text>
+      <text x="215" y="46" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="8.5">Redis / Celery</text>
+
+      <!-- Split Arrows 2 & 3 -->
+      <path d="M 275 34 L 295 18 L 310 18" stroke="#10b981" stroke-width="1.8" />
+      <polygon points="310,15 316,18 310,21" fill="#10b981" />
+
+      <path d="M 275 34 L 295 50 L 310 50" stroke="#10b981" stroke-width="1.8" />
+      <polygon points="310,47 316,50 310,53" fill="#10b981" />
+
+      <!-- Node 3A: Worker Pool 1 -->
+      <rect x="316" y="-6" width="125" height="42" rx="8" fill="#064e3b" stroke="#059669" stroke-width="1.2" filter="url(#autoGlow)" />
+      <text x="378" y="14" text-anchor="middle" fill="#a7f3d0" font-family="sans-serif" font-size="10.5" font-weight="700">Worker Cluster A</text>
+      <text x="378" y="27" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="8">Transform &amp; Clean</text>
+
+      <!-- Node 3B: Worker Pool 2 -->
+      <rect x="316" y="44" width="125" height="42" rx="8" fill="#064e3b" stroke="#059669" stroke-width="1.2" />
+      <text x="378" y="64" text-anchor="middle" fill="#a7f3d0" font-family="sans-serif" font-size="10.5" font-weight="700">Worker Cluster B</text>
+      <text x="378" y="77" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="8">Batch Verification</text>
+
+      <!-- Join Arrows -->
+      <path d="M 441 15 L 465 34" stroke="#10b981" stroke-width="1.8" />
+      <path d="M 441 65 L 465 34" stroke="#10b981" stroke-width="1.8" />
+      <polygon points="465,30 472,34 465,38" fill="#10b981" />
+
+      <!-- Node 4: Database / Sync Sink -->
+      <rect x="472" y="10" width="115" height="48" rx="8" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1.2" />
+      <text x="529" y="32" text-anchor="middle" fill="#e0e7ff" font-family="sans-serif" font-size="11" font-weight="700">Storage Sink</text>
+      <text x="529" y="46" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="8.5">Postgres / S3</text>
+
+      <!-- Final Arrow -->
+      <path d="M 587 34 L 610 34" stroke="#64748b" stroke-width="1.8" stroke-dasharray="3,2" />
+      <polygon points="610,30 616,34 610,38" fill="#64748b" />
+
+      <!-- Node 5: Notification Alert -->
+      <rect x="616" y="10" width="80" height="48" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <text x="656" y="32" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="10.5" font-weight="700">Alerts</text>
+      <text x="656" y="46" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="8.5">Slack/Email</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM PANEL: Real-time Scheduled Task Execution Table -->
+  <g transform="translate(25, 240)">
+    <rect width="750" height="186" rx="8" fill="#0b1728" stroke="#1d3354" stroke-width="1" />
+    <text x="20" y="24" fill="#f1f5f9" font-family="sans-serif" font-size="11.5" font-weight="600">Active Cron Jobs &amp; Task Stream</text>
+
+    <!-- Table Header -->
+    <g transform="translate(20, 40)">
+      <rect x="0" y="0" width="710" height="24" rx="4" fill="#14243b" />
+      <text x="12" y="16" fill="#94a3b8" font-family="monospace" font-size="9" font-weight="700">JOB IDENTIFIER</text>
+      <text x="180" y="16" fill="#94a3b8" font-family="monospace" font-size="9" font-weight="700">SCHEDULE</text>
+      <text x="320" y="16" fill="#94a3b8" font-family="monospace" font-size="9" font-weight="700">LAST RUN</text>
+      <text x="460" y="16" fill="#94a3b8" font-family="monospace" font-size="9" font-weight="700">DURATION</text>
+      <text x="600" y="16" fill="#94a3b8" font-family="monospace" font-size="9" font-weight="700">STATE</text>
+
+      <!-- Row 1 -->
+      <text x="12" y="42" fill="#ffffff" font-family="monospace" font-size="9">db_backup_snapshot.cron</text>
+      <text x="180" y="42" fill="#cbd5e1" font-family="monospace" font-size="9">0 0 * * * (Daily)</text>
+      <text x="320" y="42" fill="#cbd5e1" font-family="monospace" font-size="9">Today, 00:00:02</text>
+      <text x="460" y="42" fill="#34d399" font-family="monospace" font-size="9">1.42s</text>
+      <rect x="596" y="31" width="70" height="16" rx="3" fill="#065f46" />
+      <text x="608" y="42" fill="#a7f3d0" font-family="monospace" font-size="8.5" font-weight="600">SUCCESS</text>
+
+      <!-- Row 2 -->
+      <line x1="0" y1="52" x2="710" y2="52" stroke="#1e293b" stroke-width="0.8" />
+      <text x="12" y="68" fill="#ffffff" font-family="monospace" font-size="9">sync_inventory_cache.task</text>
+      <text x="180" y="68" fill="#cbd5e1" font-family="monospace" font-size="9">*/15 * * * * (15m)</text>
+      <text x="320" y="68" fill="#cbd5e1" font-family="monospace" font-size="9">2 mins ago</text>
+      <text x="460" y="68" fill="#34d399" font-family="monospace" font-size="9">240ms</text>
+      <rect x="596" y="57" width="70" height="16" rx="3" fill="#065f46" />
+      <text x="608" y="68" fill="#a7f3d0" font-family="monospace" font-size="8.5" font-weight="600">SUCCESS</text>
+
+      <!-- Row 3 -->
+      <line x1="0" y1="78" x2="710" y2="78" stroke="#1e293b" stroke-width="0.8" />
+      <text x="12" y="94" fill="#ffffff" font-family="monospace" font-size="9">data_pipeline_etl.worker</text>
+      <text x="180" y="94" fill="#cbd5e1" font-family="monospace" font-size="9">0 */2 * * * (2h)</text>
+      <text x="320" y="94" fill="#cbd5e1" font-family="monospace" font-size="9">45 mins ago</text>
+      <text x="460" y="94" fill="#34d399" font-family="monospace" font-size="9">8.15s</text>
+      <rect x="596" y="83" width="70" height="16" rx="3" fill="#065f46" />
+      <text x="608" y="94" fill="#a7f3d0" font-family="monospace" font-size="8.5" font-weight="600">SUCCESS</text>
+
+      <!-- Row 4 -->
+      <line x1="0" y1="104" x2="710" y2="104" stroke="#1e293b" stroke-width="0.8" />
+      <text x="12" y="120" fill="#ffffff" font-family="monospace" font-size="9">health_ping_monitor.daemon</text>
+      <text x="180" y="120" fill="#cbd5e1" font-family="monospace" font-size="9">*/1 * * * * (1m)</text>
+      <text x="320" y="120" fill="#cbd5e1" font-family="monospace" font-size="9">Just now</text>
+      <text x="460" y="120" fill="#34d399" font-family="monospace" font-size="9">18ms</text>
+      <rect x="596" y="109" width="70" height="16" rx="3" fill="#065f46" />
+      <text x="608" y="120" fill="#a7f3d0" font-family="monospace" font-size="8.5" font-weight="600">SUCCESS</text>
+    </g>
+  </g>
+
+  <!-- Watermark Badge -->
+  <g transform="translate(670, 427)">
+    <rect x="0" y="0" width="105" height="16" rx="3" fill="#030712" fill-opacity="0.8" stroke="#334155" stroke-width="0.8" />
+    <text x="8" y="11" fill="#94a3b8" font-family="sans-serif" font-size="8" font-weight="500">PROJECT PREVIEW</text>
+  </g>
+</svg>

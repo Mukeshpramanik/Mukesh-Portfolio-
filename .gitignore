@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Next.js
+.next/
+out/
+frontend/out/
+
+# Environment
+.env
+.env.local
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Logs
+*.log
+
+# Build
+dist/
+build/
+
+*.tsbuildinfo

@@ -1,0 +1,266 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas Gradient -->
+    <linearGradient id="dvBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f24" />
+      <stop offset="50%" stop-color="#0e1634" />
+      <stop offset="100%" stop-color="#080c1d" />
+    </linearGradient>
+
+    <!-- Chrome Header Gradient -->
+    <linearGradient id="dvTopBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#141c3d" />
+      <stop offset="100%" stop-color="#1d2752" />
+    </linearGradient>
+
+    <!-- Card Backgrounds -->
+    <linearGradient id="dvCardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#151e3e" />
+      <stop offset="100%" stop-color="#0f162f" />
+    </linearGradient>
+
+    <!-- Chart Gradients -->
+    <linearGradient id="cyanArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="violetArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="cyanVioletGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="barCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="barViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="windowShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" fill="url(#dvBg)" />
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="180" cy="90" r="150" fill="#06b6d4" opacity="0.10" filter="url(#softGlow)" />
+  <circle cx="700" cy="380" r="160" fill="#8b5cf6" opacity="0.12" filter="url(#softGlow)" />
+
+  <!-- Main Window Frame -->
+  <rect x="18" y="14" width="764" height="422" rx="12" fill="#0d132b" stroke="#25325c" stroke-width="1.2" filter="url(#windowShadow)" />
+
+  <!-- Window Header Bar -->
+  <rect x="18" y="14" width="764" height="46" rx="12" fill="url(#dvTopBar)" />
+  <rect x="18" y="48" width="764" height="12" fill="url(#dvTopBar)" />
+  <line x1="18" y1="60" x2="782" y2="60" stroke="#25325c" stroke-width="1" />
+
+  <!-- Window Controls -->
+  <circle cx="38" cy="37" r="4.5" fill="#ef4444" />
+  <circle cx="53" cy="37" r="4.5" fill="#f59e0b" />
+  <circle cx="68" cy="37" r="4.5" fill="#10b981" />
+
+  <!-- App Title & Icon -->
+  <g transform="translate(90, 27)">
+    <rect width="22" height="20" rx="5" fill="url(#cyanVioletGrad)" />
+    <!-- Bar chart mini icon -->
+    <path d="M5 14 L5 11 M9 14 L9 7 M13 14 L13 9 M17 14 L17 5" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" />
+    <text x="28" y="15" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="800" letter-spacing="0.5">LUMINA BI</text>
+    <text x="105" y="15" fill="#38bdf8" font-family="sans-serif" font-size="9.5" font-weight="600">ANALYTICS SUITE</text>
+  </g>
+
+  <!-- Filter Pills (Top Right) -->
+  <g transform="translate(565, 25)">
+    <rect width="36" height="24" rx="5" fill="#0e1530" stroke="#223057" stroke-width="0.8" />
+    <text x="18" y="16" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9.5">24H</text>
+
+    <rect x="42" width="36" height="24" rx="5" fill="#0e1530" stroke="#223057" stroke-width="0.8" />
+    <text x="60" y="16" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9.5">7D</text>
+
+    <rect x="84" width="38" height="24" rx="5" fill="#082b3d" stroke="#06b6d4" stroke-width="1" />
+    <text x="103" y="16" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="9.5" font-weight="700">30D</text>
+
+    <rect x="128" width="38" height="24" rx="5" fill="#0e1530" stroke="#223057" stroke-width="0.8" />
+    <text x="147" y="16" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9.5">ALL</text>
+
+    <!-- Live indicator -->
+    <rect x="172" width="38" height="24" rx="5" fill="#064e3b" stroke="#059669" stroke-width="0.8" />
+    <circle cx="181" cy="12" r="3" fill="#34d399" />
+    <text x="194" y="15.5" fill="#a7f3d0" font-family="sans-serif" font-size="8.5" font-weight="700">LIVE</text>
+  </g>
+
+  <!-- KPI CARDS ROW (4 CARDS) -->
+  <!-- Card 1: Data Points -->
+  <g transform="translate(32, 70)">
+    <rect width="176" height="66" rx="8" fill="url(#dvCardBg)" stroke="#223059" stroke-width="1" />
+    <text x="14" y="20" fill="#94a3b8" font-family="sans-serif" font-size="9" font-weight="600" letter-spacing="0.5">INGESTED DATA POINTS</text>
+    <text x="14" y="46" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="18" font-weight="800">1.84M</text>
+    <rect x="112" y="28" width="50" height="18" rx="4" fill="#064e3b" stroke="#059669" stroke-width="0.8" />
+    <text x="137" y="40.5" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="8.5" font-weight="700">+14.2% ↑</text>
+  </g>
+
+  <!-- Card 2: Query Latency -->
+  <g transform="translate(218, 70)">
+    <rect width="176" height="66" rx="8" fill="url(#dvCardBg)" stroke="#223059" stroke-width="1" />
+    <text x="14" y="20" fill="#94a3b8" font-family="sans-serif" font-size="9" font-weight="600" letter-spacing="0.5">AVG QUERY LATENCY</text>
+    <text x="14" y="46" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="18" font-weight="800">38 ms</text>
+    <rect x="112" y="28" width="50" height="18" rx="4" fill="#064e3b" stroke="#059669" stroke-width="0.8" />
+    <text x="137" y="40.5" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="8.5" font-weight="700">-8.4% ↓</text>
+  </g>
+
+  <!-- Card 3: Model Accuracy -->
+  <g transform="translate(404, 70)">
+    <rect width="176" height="66" rx="8" fill="url(#dvCardBg)" stroke="#223059" stroke-width="1" />
+    <text x="14" y="20" fill="#94a3b8" font-family="sans-serif" font-size="9" font-weight="600" letter-spacing="0.5">CACHE HIT RATIO</text>
+    <text x="14" y="46" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="18" font-weight="800">96.8%</text>
+    <rect x="112" y="28" width="50" height="18" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8" />
+    <text x="137" y="40.5" text-anchor="middle" fill="#c7d2fe" font-family="sans-serif" font-size="8.5" font-weight="700">OPTIMAL</text>
+  </g>
+
+  <!-- Card 4: Throughput -->
+  <g transform="translate(590, 70)">
+    <rect width="178" height="66" rx="8" fill="url(#dvCardBg)" stroke="#223059" stroke-width="1" />
+    <text x="14" y="20" fill="#94a3b8" font-family="sans-serif" font-size="9" font-weight="600" letter-spacing="0.5">REALTIME INGESTION</text>
+    <text x="14" y="46" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="18" font-weight="800">14.8k/s</text>
+    <rect x="114" y="28" width="50" height="18" rx="4" fill="#064e3b" stroke="#059669" stroke-width="0.8" />
+    <text x="139" y="40.5" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="8.5" font-weight="700">+6.1% ↑</text>
+  </g>
+
+  <!-- MAIN SECTION: CHART PANELS -->
+
+  <!-- LEFT: Dual-Stream Area Line Chart -->
+  <g transform="translate(32, 146)">
+    <rect width="458" height="278" rx="8" fill="url(#dvCardBg)" stroke="#223059" stroke-width="1" />
+    
+    <!-- Title & Legend -->
+    <text x="18" y="26" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="12" font-weight="700">Realtime Throughput &amp; Event Stream</text>
+    <text x="18" y="41" fill="#64748b" font-family="sans-serif" font-size="9.5">High-frequency ingestion events over 24-hour cycle</text>
+
+    <!-- Legend -->
+    <circle cx="340" cy="24" r="3.5" fill="#06b6d4" />
+    <text x="348" y="27" fill="#94a3b8" font-family="sans-serif" font-size="9.5">API Stream</text>
+    <circle cx="408" cy="24" r="3.5" fill="#8b5cf6" />
+    <text x="416" y="27" fill="#94a3b8" font-family="sans-serif" font-size="9.5">ETL Batch</text>
+
+    <!-- Chart Y-Grid & Labels -->
+    <g transform="translate(20, 60)">
+      <line x1="25" y1="20" x2="420" y2="20" stroke="#1d284a" stroke-dasharray="3,3" stroke-width="0.8" />
+      <text x="15" y="23" text-anchor="end" fill="#64748b" font-family="monospace" font-size="8.5">100k</text>
+
+      <line x1="25" y1="65" x2="420" y2="65" stroke="#1d284a" stroke-dasharray="3,3" stroke-width="0.8" />
+      <text x="15" y="68" text-anchor="end" fill="#64748b" font-family="monospace" font-size="8.5">75k</text>
+
+      <line x1="25" y1="110" x2="420" y2="110" stroke="#1d284a" stroke-dasharray="3,3" stroke-width="0.8" />
+      <text x="15" y="113" text-anchor="end" fill="#64748b" font-family="monospace" font-size="8.5">50k</text>
+
+      <line x1="25" y1="155" x2="420" y2="155" stroke="#1d284a" stroke-width="1" />
+      <text x="15" y="158" text-anchor="end" fill="#64748b" font-family="monospace" font-size="8.5">25k</text>
+
+      <!-- X-Labels -->
+      <text x="35" y="174" fill="#64748b" font-family="monospace" font-size="8.5">00:00</text>
+      <text x="105" y="174" fill="#64748b" font-family="monospace" font-size="8.5">04:00</text>
+      <text x="175" y="174" fill="#64748b" font-family="monospace" font-size="8.5">08:00</text>
+      <text x="245" y="174" fill="#64748b" font-family="monospace" font-size="8.5">12:00</text>
+      <text x="315" y="174" fill="#64748b" font-family="monospace" font-size="8.5">16:00</text>
+      <text x="385" y="174" fill="#64748b" font-family="monospace" font-size="8.5">20:00</text>
+
+      <!-- Violet Stream (ETL) -->
+      <path d="M 35 155 L 35 110 C 70 120, 105 95, 140 108 C 175 120, 210 82, 245 98 C 280 115, 315 75, 350 90 C 375 100, 400 90, 415 95 L 415 155 Z" fill="url(#violetArea)" />
+      <path d="M 35 110 C 70 120, 105 95, 140 108 C 175 120, 210 82, 245 98 C 280 115, 315 75, 350 90 C 375 100, 400 90, 415 95" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Cyan Stream (API Volume) -->
+      <path d="M 35 155 L 35 90 C 70 80, 105 50, 140 68 C 175 80, 210 40, 245 52 C 280 62, 315 28, 350 36 C 375 42, 400 35, 415 40 L 415 155 Z" fill="url(#cyanArea)" />
+      <path d="M 35 90 C 70 80, 105 50, 140 68 C 175 80, 210 40, 245 52 C 280 62, 315 28, 350 36 C 375 42, 400 35, 415 40" fill="none" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round" filter="url(#softGlow)" />
+
+      <!-- Tooltip & Marker at Peak (x=315, y=28) -->
+      <line x1="315" y1="18" x2="315" y2="155" stroke="#38bdf8" stroke-dasharray="2,2" stroke-width="1" />
+      <circle cx="315" cy="28" r="4.5" fill="#38bdf8" stroke="#ffffff" stroke-width="1.8" />
+      
+      <!-- Tooltip Card -->
+      <rect x="272" y="-4" width="86" height="22" rx="4" fill="#08182b" stroke="#06b6d4" stroke-width="0.8" />
+      <text x="315" y="11" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="700">Peak: 98.4k req</text>
+    </g>
+  </g>
+
+  <!-- RIGHT: TWO WIDGET PANELS -->
+
+  <!-- Top Right: Categorical Breakdown (Bar Chart) -->
+  <g transform="translate(502, 146)">
+    <rect width="266" height="132" rx="8" fill="url(#dvCardBg)" stroke="#223059" stroke-width="1" />
+    <text x="14" y="22" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">Category Volume Distribution</text>
+
+    <!-- Bars -->
+    <g transform="translate(14, 34)">
+      <!-- Bar 1 -->
+      <text y="10" fill="#94a3b8" font-family="sans-serif" font-size="9">Finance</text>
+      <rect x="52" y="2" width="138" height="10" rx="3" fill="#0b0f24" />
+      <rect x="52" y="2" width="122" height="10" rx="3" fill="url(#barCyan)" />
+      <text x="200" y="10" fill="#cbd5e1" font-family="monospace" font-size="9">88%</text>
+
+      <!-- Bar 2 -->
+      <text y="28" fill="#94a3b8" font-family="sans-serif" font-size="9">Health</text>
+      <rect x="52" y="20" width="138" height="10" rx="3" fill="#0b0f24" />
+      <rect x="52" y="20" width="100" height="10" rx="3" fill="url(#barViolet)" />
+      <text x="200" y="28" fill="#cbd5e1" font-family="monospace" font-size="9">72%</text>
+
+      <!-- Bar 3 -->
+      <text y="46" fill="#94a3b8" font-family="sans-serif" font-size="9">Retail</text>
+      <rect x="52" y="38" width="138" height="10" rx="3" fill="#0b0f24" />
+      <rect x="52" y="38" width="78" height="10" rx="3" fill="url(#barCyan)" />
+      <text x="200" y="46" fill="#cbd5e1" font-family="monospace" font-size="9">56%</text>
+
+      <!-- Bar 4 -->
+      <text y="64" fill="#94a3b8" font-family="sans-serif" font-size="9">SaaS</text>
+      <rect x="52" y="56" width="138" height="10" rx="3" fill="#0b0f24" />
+      <rect x="52" y="56" width="58" height="10" rx="3" fill="url(#barViolet)" />
+      <text x="200" y="64" fill="#cbd5e1" font-family="monospace" font-size="9">42%</text>
+    </g>
+  </g>
+
+  <!-- Bottom Right: Donut Distribution Chart -->
+  <g transform="translate(502, 290)">
+    <rect width="266" height="134" rx="8" fill="url(#dvCardBg)" stroke="#223059" stroke-width="1" />
+    <text x="14" y="22" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">Traffic Source Distribution</text>
+
+    <!-- Donut SVG -->
+    <g transform="translate(68, 76)">
+      <!-- Background ring -->
+      <circle cx="0" cy="0" r="34" fill="none" stroke="#0e1530" stroke-width="13" />
+      <!-- Segment 1: Cyan 52% (circ ~ 214, 52% = 111) -->
+      <circle cx="0" cy="0" r="34" fill="none" stroke="#06b6d4" stroke-width="13" stroke-dasharray="111 214" stroke-dashoffset="0" />
+      <!-- Segment 2: Violet 30% (30% = 64) -->
+      <circle cx="0" cy="0" r="34" fill="none" stroke="#8b5cf6" stroke-width="13" stroke-dasharray="64 214" stroke-dashoffset="-111" />
+      <!-- Segment 3: Emerald 18% (18% = 39) -->
+      <circle cx="0" cy="0" r="34" fill="none" stroke="#10b981" stroke-width="13" stroke-dasharray="39 214" stroke-dashoffset="-175" />
+      <text x="0" y="4" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="10.5" font-weight="800">100%</text>
+    </g>
+
+    <!-- Donut Legend -->
+    <g transform="translate(136, 48)">
+      <circle cx="0" cy="6" r="3.5" fill="#06b6d4" />
+      <text x="10" y="9" fill="#cbd5e1" font-family="sans-serif" font-size="9">Direct API (52%)</text>
+
+      <circle cx="0" cy="24" r="3.5" fill="#8b5cf6" />
+      <text x="10" y="27" fill="#cbd5e1" font-family="sans-serif" font-size="9">Webhooks (30%)</text>
+
+      <circle cx="0" cy="42" r="3.5" fill="#10b981" />
+      <text x="10" y="45" fill="#cbd5e1" font-family="sans-serif" font-size="9">Batch Sync (18%)</text>
+    </g>
+  </g>
+</svg>

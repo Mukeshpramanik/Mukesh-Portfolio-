@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="nlpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a1a" />
+      <stop offset="50%" stop-color="#121026" />
+      <stop offset="100%" stop-color="#070714" />
+    </linearGradient>
+
+    <filter id="nlpGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="450" fill="url(#nlpBg)" />
+
+  <!-- Subtle Matrix Text Grid Lines -->
+  <g opacity="0.06" stroke="#c084fc" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90" />
+    <line x1="0" y1="180" x2="800" y2="180" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="160" y1="0" x2="160" y2="450" />
+    <line x1="320" y1="0" x2="320" y2="450" />
+    <line x1="480" y1="0" x2="480" y2="450" />
+    <line x1="640" y1="0" x2="640" y2="450" />
+  </g>
+
+  <!-- Top Navigation / Status Bar -->
+  <rect x="25" y="20" width="750" height="46" rx="8" fill="#14122d" stroke="#2b2552" stroke-width="1.2" />
+  <!-- Text / Token Icon -->
+  <rect x="42" y="33" width="20" height="20" rx="5" fill="#8b5cf6" />
+  <path d="M47 38 L57 38 M47 43 L54 43 M47 48 L56 48" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" />
+  <text x="70" y="47" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Natural Language Processing &amp; LLM Pipeline</text>
+  <text x="350" y="47" fill="#7c7ca8" font-family="sans-serif" font-size="11">Transformer Self-Attention &amp; Sentiment Classification</text>
+
+  <!-- NLP Metrics Status -->
+  <g transform="translate(565, 30)">
+    <rect x="0" y="0" width="90" height="26" rx="5" fill="#064e3b" fill-opacity="0.6" stroke="#059669" stroke-width="1" />
+    <circle cx="12" cy="13" r="3.5" fill="#34d399" />
+    <text x="22" y="17" fill="#a7f3d0" font-family="monospace" font-size="10" font-weight="600">POS: +0.89</text>
+
+    <rect x="100" y="0" width="98" height="26" rx="5" fill="#1e1b4b" fill-opacity="0.7" stroke="#6366f1" stroke-width="1" />
+    <text x="110" y="17" fill="#c7d2fe" font-family="monospace" font-size="10">BERT-Base</text>
+  </g>
+
+  <!-- TOP PANEL: Tokenization & Embedding Attention Stream -->
+  <g transform="translate(25, 78)">
+    <rect width="750" height="150" rx="8" fill="#0e0c24" stroke="#2b2552" stroke-width="1" />
+    <text x="20" y="26" fill="#f1f5f9" font-family="sans-serif" font-size="12" font-weight="600">Subword Tokenization &amp; Self-Attention Weights</text>
+
+    <!-- Raw text prompt -->
+    <g transform="translate(20, 42)">
+      <text fill="#64748b" font-family="sans-serif" font-size="10">Raw Input Sentence:</text>
+      <text x="120" y="0" fill="#cbd5e1" font-family="sans-serif" font-size="10.5" font-style="italic">"The automated pipeline and real-time models delivered exceptional diagnostic precision."</text>
+    </g>
+
+    <!-- Token Chips -->
+    <g transform="translate(20, 68)">
+      <!-- Token 1 -->
+      <rect x="0" y="0" width="85" height="42" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" />
+      <text x="42" y="18" text-anchor="middle" fill="#c7d2fe" font-family="monospace" font-size="10" font-weight="700">automated</text>
+      <text x="42" y="32" text-anchor="middle" fill="#818cf8" font-family="monospace" font-size="8">ADJ • id: 4820</text>
+
+      <!-- Token 2 -->
+      <rect x="95" y="0" width="80" height="42" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" />
+      <text x="135" y="18" text-anchor="middle" fill="#c7d2fe" font-family="monospace" font-size="10" font-weight="700">pipeline</text>
+      <text x="135" y="32" text-anchor="middle" fill="#818cf8" font-family="monospace" font-size="8">NOUN • id: 741</text>
+
+      <!-- Token 3 -->
+      <rect x="185" y="0" width="85" height="42" rx="6" fill="#082f49" stroke="#0284c7" stroke-width="1" />
+      <text x="227" y="18" text-anchor="middle" fill="#bae6fd" font-family="monospace" font-size="10" font-weight="700">real-time</text>
+      <text x="227" y="32" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="8">ADJ • id: 1892</text>
+
+      <!-- Token 4 -->
+      <rect x="280" y="0" width="75" height="42" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" />
+      <text x="317" y="18" text-anchor="middle" fill="#c7d2fe" font-family="monospace" font-size="10" font-weight="700">models</text>
+      <text x="317" y="32" text-anchor="middle" fill="#818cf8" font-family="monospace" font-size="8">NOUN • id: 512</text>
+
+      <!-- Token 5 -->
+      <rect x="365" y="0" width="80" height="42" rx="6" fill="#064e3b" stroke="#059669" stroke-width="1.2" filter="url(#nlpGlow)" />
+      <text x="405" y="18" text-anchor="middle" fill="#a7f3d0" font-family="monospace" font-size="10" font-weight="700">delivered</text>
+      <text x="405" y="32" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="8">VERB • id: 329</text>
+
+      <!-- Token 6 -->
+      <rect x="455" y="0" width="95" height="42" rx="6" fill="#4c1d95" stroke="#a855f7" stroke-width="1.5" filter="url(#nlpGlow)" />
+      <text x="502" y="18" text-anchor="middle" fill="#f3e8ff" font-family="monospace" font-size="10" font-weight="700">exceptional</text>
+      <text x="502" y="32" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="8">ADJ [w=0.94]</text>
+
+      <!-- Token 7 -->
+      <rect x="560" y="0" width="85" height="42" rx="6" fill="#4c1d95" stroke="#a855f7" stroke-width="1.5" filter="url(#nlpGlow)" />
+      <text x="602" y="18" text-anchor="middle" fill="#f3e8ff" font-family="monospace" font-size="10" font-weight="700">precision</text>
+      <text x="602" y="32" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="8">NOUN [w=0.91]</text>
+    </g>
+
+    <!-- Attention connector line -->
+    <path d="M 470 120 C 510 132, 570 132, 610 120" stroke="#c084fc" stroke-dasharray="3,2" stroke-width="1.5" fill="none" />
+    <text x="540" y="140" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="8.5">Attention Affinity: 0.92</text>
+  </g>
+
+  <!-- BOTTOM LEFT: Sentiment Polarity Breakdown -->
+  <g transform="translate(25, 240)">
+    <rect width="365" height="186" rx="8" fill="#0e0c24" stroke="#2b2552" stroke-width="1" />
+    <text x="20" y="24" fill="#f1f5f9" font-family="sans-serif" font-size="11.5" font-weight="600">Sentiment Polarity &amp; Intensity</text>
+
+    <!-- Bars -->
+    <g transform="translate(20, 48)">
+      <!-- Positive -->
+      <text x="0" y="12" fill="#94a3b8" font-family="sans-serif" font-size="10">Positive</text>
+      <rect x="70" y="2" width="200" height="14" rx="3" fill="#1e293b" />
+      <rect x="70" y="2" width="178" height="14" rx="3" fill="#10b981" />
+      <text x="280" y="13" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">89.2%</text>
+
+      <!-- Neutral -->
+      <text x="0" y="42" fill="#94a3b8" font-family="sans-serif" font-size="10">Neutral</text>
+      <rect x="70" y="32" width="200" height="14" rx="3" fill="#1e293b" />
+      <rect x="70" y="32" width="18" height="14" rx="3" fill="#6366f1" />
+      <text x="280" y="43" fill="#a5b4fc" font-family="monospace" font-size="10">8.9%</text>
+
+      <!-- Negative -->
+      <text x="0" y="72" fill="#94a3b8" font-family="sans-serif" font-size="10">Negative</text>
+      <rect x="70" y="62" width="200" height="14" rx="3" fill="#1e293b" />
+      <rect x="70" y="62" width="5" height="14" rx="3" fill="#ef4444" />
+      <text x="280" y="73" fill="#f87171" font-family="monospace" font-size="10">1.9%</text>
+    </g>
+
+    <!-- Tone classification chip -->
+    <g transform="translate(20, 142)">
+      <rect width="325" height="30" rx="5" fill="#181636" stroke="#2b2552" stroke-width="0.8" />
+      <text x="12" y="19" fill="#c7d2fe" font-family="sans-serif" font-size="9.5">Overall Classification: <tspan fill="#34d399" font-weight="700">Strongly Positive (Confidence: 0.94)</tspan></text>
+    </g>
+  </g>
+
+  <!-- BOTTOM RIGHT: Semantic Embeddings Space Visualization -->
+  <g transform="translate(405, 240)">
+    <rect width="370" height="186" rx="8" fill="#0e0c24" stroke="#2b2552" stroke-width="1" />
+    <text x="20" y="24" fill="#f1f5f9" font-family="sans-serif" font-size="11.5" font-weight="600">2D t-SNE Semantic Embedding Space</text>
+
+    <!-- Embedding coordinate scatter -->
+    <g transform="translate(20, 40)">
+      <!-- Axes -->
+      <line x1="15" y1="120" x2="310" y2="120" stroke="#26224d" stroke-width="1" />
+      <line x1="15" y1="10" x2="15" y2="120" stroke="#26224d" stroke-width="1" />
+
+      <!-- Cluster 1: Performance / Precision (Cyan) -->
+      <ellipse cx="230" cy="45" rx="50" ry="25" fill="#06b6d4" fill-opacity="0.1" stroke="#06b6d4" stroke-dasharray="2,2" stroke-width="1" />
+      <circle cx="215" cy="40" r="4" fill="#06b6d4" />
+      <circle cx="235" cy="35" r="4" fill="#06b6d4" />
+      <circle cx="245" cy="52" r="4" fill="#38bdf8" />
+      <text x="230" y="80" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="8.5">accuracy, precision, metric</text>
+
+      <!-- Cluster 2: Workflow / Architecture (Violet) -->
+      <ellipse cx="90" cy="75" rx="45" ry="25" fill="#8b5cf6" fill-opacity="0.1" stroke="#8b5cf6" stroke-dasharray="2,2" stroke-width="1" />
+      <circle cx="80" cy="70" r="4" fill="#8b5cf6" />
+      <circle cx="100" cy="78" r="4" fill="#8b5cf6" />
+      <circle cx="92" cy="85" r="4" fill="#a855f7" />
+      <text x="90" y="112" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="8.5">pipeline, automated, deploy</text>
+    </g>
+  </g>
+
+  <!-- Watermark Badge -->
+  <g transform="translate(670, 427)">
+    <rect x="0" y="0" width="105" height="16" rx="3" fill="#030712" fill-opacity="0.8" stroke="#334155" stroke-width="0.8" />
+    <text x="8" y="11" fill="#94a3b8" font-family="sans-serif" font-size="8" font-weight="500">PROJECT PREVIEW</text>
+  </g>
+</svg>

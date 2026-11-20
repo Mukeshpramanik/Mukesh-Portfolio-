@@ -1,0 +1,287 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas Gradients -->
+    <linearGradient id="edaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0e22" />
+      <stop offset="50%" stop-color="#14112e" />
+      <stop offset="100%" stop-color="#090a1a" />
+    </linearGradient>
+
+    <!-- Chrome Header Gradient -->
+    <linearGradient id="edaTopBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#161539" />
+      <stop offset="100%" stop-color="#221b47" />
+    </linearGradient>
+
+    <!-- Card Backgrounds -->
+    <linearGradient id="edaCardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161838" />
+      <stop offset="100%" stop-color="#101229" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="purplePinkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="kdeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="windowShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="450" fill="url(#edaBg)" />
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="160" cy="100" r="150" fill="#8b5cf6" opacity="0.10" filter="url(#softGlow)" />
+  <circle cx="680" cy="360" r="160" fill="#ec4899" opacity="0.10" filter="url(#softGlow)" />
+
+  <!-- Main Window Frame -->
+  <rect x="18" y="14" width="764" height="422" rx="12" fill="#0d1024" stroke="#26274e" stroke-width="1.2" filter="url(#windowShadow)" />
+
+  <!-- Window Header Bar -->
+  <rect x="18" y="14" width="764" height="46" rx="12" fill="url(#edaTopBar)" />
+  <rect x="18" y="48" width="764" height="12" fill="url(#edaTopBar)" />
+  <line x1="18" y1="60" x2="782" y2="60" stroke="#26274e" stroke-width="1" />
+
+  <!-- Window Controls -->
+  <circle cx="38" cy="37" r="4.5" fill="#ef4444" />
+  <circle cx="53" cy="37" r="4.5" fill="#f59e0b" />
+  <circle cx="68" cy="37" r="4.5" fill="#10b981" />
+
+  <!-- App Title & Icon -->
+  <g transform="translate(90, 27)">
+    <rect width="22" height="20" rx="5" fill="url(#purplePinkGrad)" />
+    <!-- Scatter plot matrix mini icon -->
+    <circle cx="6" cy="6" r="1.6" fill="#ffffff" />
+    <circle cx="11" cy="9" r="1.6" fill="#ffffff" />
+    <circle cx="16" cy="7" r="1.6" fill="#ffffff" />
+    <circle cx="8" cy="14" r="1.6" fill="#ffffff" />
+    <circle cx="15" cy="13" r="1.6" fill="#ffffff" />
+    <text x="28" y="15" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="800" letter-spacing="0.5">SYNAPSE EDA</text>
+    <text x="125" y="15" fill="#c084fc" font-family="sans-serif" font-size="9.5" font-weight="600">STATISTICAL STUDIO</text>
+  </g>
+
+  <!-- Dataset Stats Badges -->
+  <g transform="translate(485, 25)">
+    <rect width="135" height="25" rx="6" fill="#171233" stroke="#4c1d95" stroke-width="0.8" />
+    <text x="10" y="16.5" fill="#c7d2fe" font-family="monospace" font-size="9.5" font-weight="600">45,211 × 18 cols</text>
+
+    <rect x="145" y="0" width="135" height="25" rx="6" fill="#064e3b" stroke="#059669" stroke-width="0.8" />
+    <circle cx="157" cy="12.5" r="3.5" fill="#34d399" />
+    <text x="166" y="16.5" fill="#a7f3d0" font-family="monospace" font-size="9.5" font-weight="600">Nulls: 0.0% Clean</text>
+  </g>
+
+  <!-- MAIN BODY: TWO COLUMNS -->
+
+  <!-- LEFT: 5x5 Pearson Correlation Matrix Heatmap -->
+  <g transform="translate(32, 70)">
+    <rect width="365" height="354" rx="8" fill="url(#edaCardBg)" stroke="#24234b" stroke-width="1" />
+    
+    <text x="16" y="24" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="11.5" font-weight="700">Multivariate Correlation Heatmap</text>
+    <text x="16" y="38" fill="#64748b" font-family="sans-serif" font-size="9">Pearson coefficient (r) with collinearity test</text>
+
+    <!-- Heatmap Grid -->
+    <g transform="translate(68, 64)">
+      <!-- Column Headers -->
+      <text x="24" y="-8" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="9">Age</text>
+      <text x="76" y="-8" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="9">Income</text>
+      <text x="128" y="-8" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="9">Score</text>
+      <text x="180" y="-8" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="9">Latncy</text>
+      <text x="232" y="-8" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="9">Target</text>
+
+      <!-- Row 1: Age -->
+      <text x="-10" y="32" text-anchor="end" fill="#94a3b8" font-family="monospace" font-size="9">Age</text>
+      <rect x="0" y="6" width="48" height="42" rx="4" fill="#8b5cf6" fill-opacity="0.95" />
+      <text x="24" y="31" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9.5" font-weight="700">1.00</text>
+      <rect x="52" y="6" width="48" height="42" rx="4" fill="#6366f1" fill-opacity="0.75" />
+      <text x="76" y="31" text-anchor="middle" fill="#e0e7ff" font-family="monospace" font-size="9.5">0.42</text>
+      <rect x="104" y="6" width="48" height="42" rx="4" fill="#4338ca" fill-opacity="0.65" />
+      <text x="128" y="31" text-anchor="middle" fill="#e0e7ff" font-family="monospace" font-size="9.5">0.26</text>
+      <rect x="156" y="6" width="48" height="42" rx="4" fill="#0284c7" fill-opacity="0.65" />
+      <text x="180" y="31" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="9.5">-0.38</text>
+      <rect x="208" y="6" width="48" height="42" rx="4" fill="#0284c7" fill-opacity="0.5" />
+      <text x="232" y="31" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="9.5">-0.21</text>
+
+      <!-- Row 2: Income -->
+      <text x="-10" y="80" text-anchor="end" fill="#94a3b8" font-family="monospace" font-size="9">Income</text>
+      <rect x="0" y="54" width="48" height="42" rx="4" fill="#6366f1" fill-opacity="0.75" />
+      <text x="24" y="79" text-anchor="middle" fill="#e0e7ff" font-family="monospace" font-size="9.5">0.42</text>
+      <rect x="52" y="54" width="48" height="42" rx="4" fill="#8b5cf6" fill-opacity="0.95" />
+      <text x="76" y="79" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9.5" font-weight="700">1.00</text>
+      <rect x="104" y="54" width="48" height="42" rx="4" fill="#7c3aed" fill-opacity="0.85" />
+      <text x="128" y="79" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9.5">0.68</text>
+      <rect x="156" y="54" width="48" height="42" rx="4" fill="#0369a1" fill-opacity="0.6" />
+      <text x="180" y="79" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="9.5">-0.44</text>
+      <rect x="208" y="54" width="48" height="42" rx="4" fill="#6366f1" fill-opacity="0.7" />
+      <text x="232" y="79" text-anchor="middle" fill="#e0e7ff" font-family="monospace" font-size="9.5">0.35</text>
+
+      <!-- Row 3: Score -->
+      <text x="-10" y="128" text-anchor="end" fill="#94a3b8" font-family="monospace" font-size="9">Score</text>
+      <rect x="0" y="102" width="48" height="42" rx="4" fill="#4338ca" fill-opacity="0.65" />
+      <text x="24" y="127" text-anchor="middle" fill="#e0e7ff" font-family="monospace" font-size="9.5">0.26</text>
+      <rect x="52" y="102" width="48" height="42" rx="4" fill="#7c3aed" fill-opacity="0.85" />
+      <text x="76" y="127" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9.5">0.68</text>
+      <rect x="104" y="102" width="48" height="42" rx="4" fill="#8b5cf6" fill-opacity="0.95" />
+      <text x="128" y="127" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9.5" font-weight="700">1.00</text>
+      <rect x="156" y="102" width="48" height="42" rx="4" fill="#0284c7" fill-opacity="0.45" />
+      <text x="180" y="127" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="9.5">-0.19</text>
+      <rect x="208" y="102" width="48" height="42" rx="4" fill="#7c3aed" fill-opacity="0.8" />
+      <text x="232" y="127" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9.5">0.58</text>
+
+      <!-- Row 4: Latncy -->
+      <text x="-10" y="176" text-anchor="end" fill="#94a3b8" font-family="monospace" font-size="9">Latncy</text>
+      <rect x="0" y="150" width="48" height="42" rx="4" fill="#0284c7" fill-opacity="0.65" />
+      <text x="24" y="175" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="9.5">-0.38</text>
+      <rect x="52" y="150" width="48" height="42" rx="4" fill="#0369a1" fill-opacity="0.6" />
+      <text x="76" y="175" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="9.5">-0.44</text>
+      <rect x="104" y="150" width="48" height="42" rx="4" fill="#0284c7" fill-opacity="0.45" />
+      <text x="128" y="175" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="9.5">-0.19</text>
+      <rect x="156" y="150" width="48" height="42" rx="4" fill="#8b5cf6" fill-opacity="0.95" />
+      <text x="180" y="175" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9.5" font-weight="700">1.00</text>
+      <rect x="208" y="150" width="48" height="42" rx="4" fill="#0284c7" fill-opacity="0.7" />
+      <text x="232" y="175" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="9.5">-0.52</text>
+
+      <!-- Row 5: Target -->
+      <text x="-10" y="224" text-anchor="end" fill="#94a3b8" font-family="monospace" font-size="9">Target</text>
+      <rect x="0" y="198" width="48" height="42" rx="4" fill="#0284c7" fill-opacity="0.5" />
+      <text x="24" y="223" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="9.5">-0.21</text>
+      <rect x="52" y="198" width="48" height="42" rx="4" fill="#6366f1" fill-opacity="0.7" />
+      <text x="76" y="223" text-anchor="middle" fill="#e0e7ff" font-family="monospace" font-size="9.5">0.35</text>
+      <rect x="104" y="198" width="48" height="42" rx="4" fill="#7c3aed" fill-opacity="0.8" />
+      <text x="128" y="223" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9.5">0.58</text>
+      <rect x="156" y="198" width="48" height="42" rx="4" fill="#0284c7" fill-opacity="0.7" />
+      <text x="180" y="223" text-anchor="middle" fill="#e0f2fe" font-family="monospace" font-size="9.5">-0.52</text>
+      <rect x="208" y="198" width="48" height="42" rx="4" fill="#8b5cf6" fill-opacity="0.95" />
+      <text x="232" y="223" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="9.5" font-weight="700">1.00</text>
+    </g>
+
+    <!-- Heatmap Gradient Scale Bar -->
+    <g transform="translate(68, 318)">
+      <text x="-10" y="10" text-anchor="end" fill="#64748b" font-family="monospace" font-size="8.5">-1.0</text>
+      <linearGradient id="scaleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#0284c7" />
+        <stop offset="50%" stop-color="#1e1b4b" />
+        <stop offset="100%" stop-color="#8b5cf6" />
+      </linearGradient>
+      <rect width="256" height="8" rx="4" fill="url(#scaleGrad)" />
+      <text x="266" y="10" fill="#64748b" font-family="monospace" font-size="8.5">+1.0</text>
+    </g>
+  </g>
+
+  <!-- RIGHT: DISTRIBUTION PLOT & BOXPLOT -->
+
+  <!-- Top Right: KDE Density & Histogram -->
+  <g transform="translate(412, 70)">
+    <rect width="356" height="170" rx="8" fill="url(#edaCardBg)" stroke="#24234b" stroke-width="1" />
+    
+    <text x="16" y="22" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">Distribution Profile (KDE &amp; Bins)</text>
+    <text x="16" y="35" fill="#64748b" font-family="sans-serif" font-size="9">Target variable continuous density fitting</text>
+
+    <!-- Histogram Bars & KDE Curve -->
+    <g transform="translate(25, 50)">
+      <!-- Baseline axis -->
+      <line x1="0" y1="95" x2="310" y2="95" stroke="#222346" stroke-width="1" />
+
+      <!-- Histogram Bins -->
+      <g fill="#4338ca" opacity="0.6">
+        <rect x="10" y="80" width="16" height="15" rx="2" />
+        <rect x="30" y="66" width="16" height="29" rx="2" />
+        <rect x="50" y="48" width="16" height="47" rx="2" />
+        <rect x="70" y="30" width="16" height="65" rx="2" />
+        <rect x="90" y="18" width="16" height="77" rx="2" fill="#6366f1" />
+        <rect x="110" y="12" width="16" height="83" rx="2" fill="#6366f1" />
+        <rect x="130" y="20" width="16" height="75" rx="2" fill="#6366f1" />
+        <rect x="150" y="34" width="16" height="61" rx="2" />
+        <rect x="170" y="48" width="16" height="47" rx="2" />
+        <rect x="190" y="60" width="16" height="35" rx="2" />
+        <rect x="210" y="70" width="16" height="25" rx="2" />
+        <rect x="230" y="78" width="16" height="17" rx="2" />
+        <rect x="250" y="84" width="16" height="11" rx="2" />
+        <rect x="270" y="88" width="16" height="7" rx="2" />
+      </g>
+
+      <!-- Smooth Gaussian KDE Spline Curve with Gradient Fill -->
+      <path d="M 5 95 C 40 92, 70 40, 115 10 C 145 10, 180 50, 220 72 C 260 88, 285 93, 305 95 L 305 95 L 5 95 Z" fill="url(#kdeGrad)" />
+      <path d="M 5 95 C 40 92, 70 40, 115 10 C 145 10, 180 50, 220 72 C 260 88, 285 93, 305 95" fill="none" stroke="#ec4899" stroke-width="2.2" stroke-linecap="round" />
+
+      <!-- Mean & Median Indicator Line -->
+      <line x1="118" y1="8" x2="118" y2="95" stroke="#f472b6" stroke-dasharray="3,3" stroke-width="1.2" />
+      <rect x="122" y="14" width="75" height="16" rx="3" fill="#0d0e22" stroke="#ec4899" stroke-width="0.8" />
+      <text x="160" y="25" text-anchor="middle" fill="#f472b6" font-family="monospace" font-size="8.5" font-weight="700">μ = 48.6 • σ = 12.4</text>
+    </g>
+  </g>
+
+  <!-- Bottom Right: Box-and-Whisker Outlier Plot -->
+  <g transform="translate(412, 252)">
+    <rect width="356" height="172" rx="8" fill="url(#edaCardBg)" stroke="#24234b" stroke-width="1" />
+    
+    <text x="16" y="22" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">Categorical Quartile &amp; Outlier Plots</text>
+    <text x="16" y="35" fill="#64748b" font-family="sans-serif" font-size="9">Interquartile range (IQR = Q3 - Q1) across cohort tiers</text>
+
+    <!-- Boxplot 1: Tier A -->
+    <g transform="translate(25, 48)">
+      <text y="14" fill="#94a3b8" font-family="monospace" font-size="9">Tier A</text>
+      <!-- Whisker line -->
+      <line x1="60" y1="10" x2="270" y2="10" stroke="#475569" stroke-width="1.2" />
+      <line x1="60" y1="5" x2="60" y2="15" stroke="#475569" stroke-width="1.2" />
+      <line x1="270" y1="5" x2="270" y2="15" stroke="#475569" stroke-width="1.2" />
+      <!-- Box -->
+      <rect x="100" y="1" width="115" height="18" rx="3" fill="#312e81" stroke="#818cf8" stroke-width="1.2" />
+      <!-- Median line -->
+      <line x1="160" y1="1" x2="160" y2="19" stroke="#ffffff" stroke-width="1.8" />
+      <!-- Outlier dots -->
+      <circle cx="288" cy="10" r="2.5" fill="#f43f5e" />
+      <circle cx="298" cy="10" r="2.5" fill="#f43f5e" />
+    </g>
+
+    <!-- Boxplot 2: Tier B -->
+    <g transform="translate(25, 80)">
+      <text y="14" fill="#94a3b8" font-family="monospace" font-size="9">Tier B</text>
+      <!-- Whisker line -->
+      <line x1="80" y1="10" x2="250" y2="10" stroke="#475569" stroke-width="1.2" />
+      <line x1="80" y1="5" x2="80" y2="15" stroke="#475569" stroke-width="1.2" />
+      <line x1="250" y1="5" x2="250" y2="15" stroke="#475569" stroke-width="1.2" />
+      <!-- Box -->
+      <rect x="120" y="1" width="95" height="18" rx="3" fill="#4c1d95" stroke="#c084fc" stroke-width="1.2" />
+      <!-- Median line -->
+      <line x1="175" y1="1" x2="175" y2="19" stroke="#ffffff" stroke-width="1.8" />
+      <!-- Outlier dots -->
+      <circle cx="50" cy="10" r="2.5" fill="#f43f5e" />
+    </g>
+
+    <!-- Boxplot 3: Tier C -->
+    <g transform="translate(25, 112)">
+      <text y="14" fill="#94a3b8" font-family="monospace" font-size="9">Tier C</text>
+      <!-- Whisker line -->
+      <line x1="50" y1="10" x2="220" y2="10" stroke="#475569" stroke-width="1.2" />
+      <line x1="50" y1="5" x2="50" y2="15" stroke="#475569" stroke-width="1.2" />
+      <line x1="220" y1="5" x2="220" y2="15" stroke="#475569" stroke-width="1.2" />
+      <!-- Box -->
+      <rect x="90" y="1" width="85" height="18" rx="3" fill="#1e1b4b" stroke="#38bdf8" stroke-width="1.2" />
+      <!-- Median line -->
+      <line x1="130" y1="1" x2="130" y2="19" stroke="#ffffff" stroke-width="1.8" />
+      <!-- Outliers -->
+      <circle cx="245" cy="10" r="2.5" fill="#f43f5e" />
+      <circle cx="260" cy="10" r="2.5" fill="#f43f5e" />
+    </g>
+
+    <!-- Bottom Stat Pill -->
+    <g transform="translate(16, 142)">
+      <rect width="324" height="20" rx="4" fill="#0c0e22" stroke="#25274d" stroke-width="0.8" />
+      <text x="10" y="13.5" fill="#818cf8" font-family="monospace" font-size="8.5">ANOVA F-stat: 42.81 (p &lt; 0.001) • Bonferroni adjusted</text>
+    </g>
+  </g>
+</svg>

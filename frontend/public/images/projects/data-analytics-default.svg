@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="biBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08101a" />
+      <stop offset="50%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#060c14" />
+    </linearGradient>
+
+    <!-- Bar Gradients -->
+    <linearGradient id="biBarCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <linearGradient id="biBarEmerald" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <filter id="biGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="450" fill="url(#biBg)" />
+
+  <!-- Subtle Financial Grid -->
+  <g opacity="0.06" stroke="#0ea5e9" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90" />
+    <line x1="0" y1="180" x2="800" y2="180" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="160" y1="0" x2="160" y2="450" />
+    <line x1="320" y1="0" x2="320" y2="450" />
+    <line x1="480" y1="0" x2="480" y2="450" />
+    <line x1="640" y1="0" x2="640" y2="450" />
+  </g>
+
+  <!-- Top App Navigation / Status Bar -->
+  <rect x="25" y="20" width="750" height="46" rx="8" fill="#101c2e" stroke="#1d2d44" stroke-width="1.2" />
+  <!-- Analytics Chart Icon -->
+  <rect x="42" y="33" width="20" height="20" rx="5" fill="#0ea5e9" />
+  <path d="M46 45 L50 40 L54 42 L58 36" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <text x="70" y="47" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Business Intelligence &amp; Analytics Hub</text>
+  <text x="310" y="47" fill="#64748b" font-family="sans-serif" font-size="11">KPI Reporting, Performance Benchmarking &amp; Insights</text>
+
+  <!-- Data Refresh Tag -->
+  <g transform="translate(580, 30)">
+    <rect x="0" y="0" width="85" height="26" rx="5" fill="#064e3b" fill-opacity="0.6" stroke="#059669" stroke-width="1" />
+    <circle cx="12" cy="13" r="3.5" fill="#34d399" />
+    <text x="22" y="17" fill="#a7f3d0" font-family="monospace" font-size="10" font-weight="600">LIVE SYNC</text>
+
+    <rect x="95" y="0" width="90" height="26" rx="5" fill="#1e293b" />
+    <text x="105" y="17" fill="#94a3b8" font-family="monospace" font-size="10">Q1 - Q4 2026</text>
+  </g>
+
+  <!-- KPI Metrics Cards Row -->
+  <g transform="translate(25, 78)">
+    <!-- Card 1: Gross Revenue -->
+    <rect x="0" y="0" width="176" height="74" rx="8" fill="#0c1726" stroke="#1d2d44" stroke-width="1" />
+    <text x="14" y="24" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="600">ANNUAL VOLUME</text>
+    <text x="14" y="52" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="700">$4.82M</text>
+    <rect x="110" y="34" width="52" height="20" rx="4" fill="#065f46" fill-opacity="0.4" stroke="#059669" stroke-width="0.8" />
+    <text x="117" y="48" fill="#34d399" font-family="sans-serif" font-size="9.5" font-weight="600">+24.2% ↑</text>
+
+    <!-- Card 2: Conversion -->
+    <rect x="191" y="0" width="176" height="74" rx="8" fill="#0c1726" stroke="#1d2d44" stroke-width="1" />
+    <text x="14" y="24" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="600">CONVERSION RATE</text>
+    <text x="14" y="52" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="700">3.84%</text>
+    <rect x="110" y="34" width="52" height="20" rx="4" fill="#065f46" fill-opacity="0.4" stroke="#059669" stroke-width="0.8" />
+    <text x="117" y="48" fill="#34d399" font-family="sans-serif" font-size="9.5" font-weight="600">+1.1% ↑</text>
+
+    <!-- Card 3: Retention -->
+    <rect x="382" y="0" width="176" height="74" rx="8" fill="#0c1726" stroke="#1d2d44" stroke-width="1" />
+    <text x="14" y="24" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="600">COHORT RETENTION</text>
+    <text x="14" y="52" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="700">88.6%</text>
+    <rect x="110" y="34" width="52" height="20" rx="4" fill="#1e1b4b" fill-opacity="0.6" stroke="#818cf8" stroke-width="0.8" />
+    <text x="116" y="48" fill="#a5b4fc" font-family="sans-serif" font-size="9.5" font-weight="600">OPTIMAL</text>
+
+    <!-- Card 4: Average LTV -->
+    <rect x="574" y="0" width="176" height="74" rx="8" fill="#0c1726" stroke="#1d2d44" stroke-width="1" />
+    <text x="14" y="24" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="600">CUSTOMER LTV</text>
+    <text x="14" y="52" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="700">$1,450</text>
+    <rect x="110" y="34" width="52" height="20" rx="4" fill="#065f46" fill-opacity="0.4" stroke="#059669" stroke-width="0.8" />
+    <text x="117" y="48" fill="#34d399" font-family="sans-serif" font-size="9.5" font-weight="600">+8.5% ↑</text>
+  </g>
+
+  <!-- Main Chart Section: Left (Monthly Performance Bar Chart) -->
+  <g transform="translate(25, 164)">
+    <rect width="470" height="262" rx="8" fill="#0a1320" stroke="#1d2d44" stroke-width="1" />
+    <text x="18" y="28" fill="#f1f5f9" font-family="sans-serif" font-size="12" font-weight="600">Monthly Revenue vs Benchmark Target</text>
+
+    <!-- Legend -->
+    <rect x="300" y="20" width="10" height="10" rx="2" fill="#06b6d4" />
+    <text x="316" y="29" fill="#94a3b8" font-family="sans-serif" font-size="10">Actual</text>
+    <line x1="375" y1="25" x2="395" y2="25" stroke="#f59e0b" stroke-dasharray="3,2" stroke-width="2" />
+    <text x="402" y="29" fill="#94a3b8" font-family="sans-serif" font-size="10">Target</text>
+
+    <!-- Chart Grid -->
+    <g transform="translate(30, 48)">
+      <line x1="0" y1="35" x2="415" y2="35" stroke="#1e293b" stroke-dasharray="3,3" />
+      <line x1="0" y1="85" x2="415" y2="85" stroke="#1e293b" stroke-dasharray="3,3" />
+      <line x1="0" y1="135" x2="415" y2="135" stroke="#1e293b" stroke-dasharray="3,3" />
+      <line x1="0" y1="185" x2="415" y2="185" stroke="#334155" stroke-width="1.2" />
+
+      <!-- Target Milestone Line -->
+      <line x1="10" y1="70" x2="415" y2="45" stroke="#f59e0b" stroke-dasharray="4,3" stroke-width="2" />
+
+      <!-- 6 Month Bar Groups -->
+      <!-- Jan -->
+      <text x="25" y="202" fill="#64748b" font-family="monospace" font-size="9.5">Jan</text>
+      <rect x="18" y="95" width="28" height="90" rx="3" fill="url(#biBarCyan)" />
+
+      <!-- Feb -->
+      <text x="95" y="202" fill="#64748b" font-family="monospace" font-size="9.5">Feb</text>
+      <rect x="88" y="80" width="28" height="105" rx="3" fill="url(#biBarCyan)" />
+
+      <!-- Mar -->
+      <text x="165" y="202" fill="#64748b" font-family="monospace" font-size="9.5">Mar</text>
+      <rect x="158" y="65" width="28" height="120" rx="3" fill="url(#biBarCyan)" />
+
+      <!-- Apr -->
+      <text x="235" y="202" fill="#64748b" font-family="monospace" font-size="9.5">Apr</text>
+      <rect x="228" y="55" width="28" height="130" rx="3" fill="url(#biBarCyan)" />
+
+      <!-- May -->
+      <text x="305" y="202" fill="#64748b" font-family="monospace" font-size="9.5">May</text>
+      <rect x="298" y="45" width="28" height="140" rx="3" fill="url(#biBarCyan)" />
+
+      <!-- Jun -->
+      <text x="375" y="202" fill="#64748b" font-family="monospace" font-size="9.5">Jun</text>
+      <rect x="368" y="32" width="28" height="153" rx="3" fill="url(#biBarEmerald)" filter="url(#biGlow)" />
+    </g>
+  </g>
+
+  <!-- Right Panel: Conversion Funnel Analysis -->
+  <g transform="translate(507, 164)">
+    <rect width="268" height="262" rx="8" fill="#0a1320" stroke="#1d2d44" stroke-width="1" />
+    <text x="16" y="26" fill="#f1f5f9" font-family="sans-serif" font-size="11.5" font-weight="600">Funnel Conversion Stream</text>
+
+    <!-- Funnel Stages -->
+    <g transform="translate(16, 45)">
+      <!-- Stage 1 -->
+      <text x="0" y="14" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Total Visits</text>
+      <rect x="0" y="20" width="236" height="24" rx="4" fill="#082f49" stroke="#0284c7" stroke-width="1" />
+      <text x="12" y="36" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700">142,500 (100%)</text>
+
+      <!-- Stage 2 -->
+      <text x="0" y="66" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Active Signups</text>
+      <rect x="0" y="72" width="180" height="24" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" />
+      <text x="12" y="88" fill="#a5b4fc" font-family="monospace" font-size="10" font-weight="700">42,800 (30.0%)</text>
+
+      <!-- Stage 3 -->
+      <text x="0" y="118" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Qualified Leads</text>
+      <rect x="0" y="124" width="125" height="24" rx="4" fill="#312e81" stroke="#818cf8" stroke-width="1" />
+      <text x="12" y="140" fill="#c7d2fe" font-family="monospace" font-size="10" font-weight="700">18,200 (12.7%)</text>
+
+      <!-- Stage 4 -->
+      <text x="0" y="170" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Converted Customers</text>
+      <rect x="0" y="176" width="75" height="24" rx="4" fill="#064e3b" stroke="#059669" stroke-width="1" />
+      <text x="10" y="192" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">5,472 (3.8%)</text>
+    </g>
+  </g>
+
+  <!-- Watermark Badge -->
+  <g transform="translate(670, 427)">
+    <rect x="0" y="0" width="105" height="16" rx="3" fill="#030712" fill-opacity="0.8" stroke="#334155" stroke-width="0.8" />
+    <text x="8" y="11" fill="#94a3b8" font-family="sans-serif" font-size="8" font-weight="500">PROJECT PREVIEW</text>
+  </g>
+</svg>

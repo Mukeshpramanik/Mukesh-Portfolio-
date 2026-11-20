@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="ecomBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a101d" />
+      <stop offset="50%" stop-color="#0f192c" />
+      <stop offset="100%" stop-color="#070c17" />
+    </linearGradient>
+
+    <filter id="ecomGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="450" fill="url(#ecomBg)" />
+
+  <!-- Subtle Commerce Grid -->
+  <g opacity="0.06" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90" />
+    <line x1="0" y1="180" x2="800" y2="180" />
+    <line x1="0" y1="270" x2="800" y2="270" />
+    <line x1="0" y1="360" x2="800" y2="360" />
+    <line x1="160" y1="0" x2="160" y2="450" />
+    <line x1="320" y1="0" x2="320" y2="450" />
+    <line x1="480" y1="0" x2="480" y2="450" />
+    <line x1="640" y1="0" x2="640" y2="450" />
+  </g>
+
+  <!-- Top App Navigation / Status Bar -->
+  <rect x="25" y="20" width="750" height="46" rx="8" fill="#121e33" stroke="#1f3252" stroke-width="1.2" />
+  <!-- Shopping Bag Icon -->
+  <rect x="42" y="33" width="20" height="20" rx="5" fill="#0284c7" />
+  <path d="M47 40 L57 40 L56 48 L48 48 Z M49 40 C49 36, 55 36, 55 40" stroke="#ffffff" stroke-width="1.4" fill="none" />
+  <text x="70" y="47" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Digital Commerce &amp; Merchant Platform</text>
+  <text x="340" y="47" fill="#64748b" font-family="sans-serif" font-size="11">Order Fulfillment, Inventory &amp; Payment Processing</text>
+
+  <!-- Status Badges -->
+  <g transform="translate(565, 30)">
+    <rect x="0" y="0" width="90" height="26" rx="5" fill="#064e3b" fill-opacity="0.6" stroke="#059669" stroke-width="1" />
+    <circle cx="12" cy="13" r="3.5" fill="#34d399" />
+    <text x="22" y="17" fill="#a7f3d0" font-family="monospace" font-size="10" font-weight="600">STRIPE SYNC</text>
+
+    <rect x="100" y="0" width="98" height="26" rx="5" fill="#1e1b4b" fill-opacity="0.7" stroke="#6366f1" stroke-width="1" />
+    <text x="110" y="17" fill="#c7d2fe" font-family="monospace" font-size="10">Orders: 1,480</text>
+  </g>
+
+  <!-- KPI Row -->
+  <g transform="translate(25, 78)">
+    <rect x="0" y="0" width="176" height="74" rx="8" fill="#0d1829" stroke="#1f3252" stroke-width="1" />
+    <text x="14" y="24" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="600">STORE REVENUE</text>
+    <text x="14" y="52" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="700">$94,250</text>
+    <rect x="110" y="34" width="52" height="20" rx="4" fill="#065f46" fill-opacity="0.4" stroke="#059669" stroke-width="0.8" />
+    <text x="116" y="48" fill="#34d399" font-family="sans-serif" font-size="9.5" font-weight="600">+18.5% ↑</text>
+
+    <rect x="191" y="0" width="176" height="74" rx="8" fill="#0d1829" stroke="#1f3252" stroke-width="1" />
+    <text x="14" y="24" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="600">AVERAGE ORDER</text>
+    <text x="14" y="52" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="700">$142.80</text>
+    <rect x="110" y="34" width="52" height="20" rx="4" fill="#065f46" fill-opacity="0.4" stroke="#059669" stroke-width="0.8" />
+    <text x="116" y="48" fill="#34d399" font-family="sans-serif" font-size="9.5" font-weight="600">+4.2% ↑</text>
+
+    <rect x="382" y="0" width="176" height="74" rx="8" fill="#0d1829" stroke="#1f3252" stroke-width="1" />
+    <text x="14" y="24" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="600">CART CHECKOUT</text>
+    <text x="14" y="52" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="700">72.4%</text>
+    <rect x="110" y="34" width="52" height="20" rx="4" fill="#1e1b4b" fill-opacity="0.6" stroke="#818cf8" stroke-width="0.8" />
+    <text x="118" y="48" fill="#a5b4fc" font-family="sans-serif" font-size="9.5" font-weight="600">OPTIMAL</text>
+
+    <rect x="574" y="0" width="176" height="74" rx="8" fill="#0d1829" stroke="#1f3252" stroke-width="1" />
+    <text x="14" y="24" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="600">INVENTORY SKUs</text>
+    <text x="14" y="52" fill="#ffffff" font-family="sans-serif" font-size="20" font-weight="700">4,280</text>
+    <rect x="110" y="34" width="52" height="20" rx="4" fill="#065f46" fill-opacity="0.4" stroke="#059669" stroke-width="0.8" />
+    <text x="118" y="48" fill="#34d399" font-family="sans-serif" font-size="9.5" font-weight="600">SYNCED</text>
+  </g>
+
+  <!-- Product Catalog Grid Row -->
+  <g transform="translate(25, 164)">
+    <rect width="750" height="262" rx="8" fill="#0b1424" stroke="#1f3252" stroke-width="1" />
+    <text x="20" y="26" fill="#f1f5f9" font-family="sans-serif" font-size="12" font-weight="600">Featured Store Catalog &amp; Real-Time Inventory</text>
+
+    <!-- 3 Product Cards -->
+    <!-- Card 1 -->
+    <g transform="translate(20, 42)">
+      <rect width="225" height="195" rx="8" fill="#111c30" stroke="#253a5e" stroke-width="1" />
+      <rect x="12" y="12" width="201" height="90" rx="6" fill="#182744" />
+      <!-- Product Icon Graphic -->
+      <circle cx="112" cy="57" r="24" fill="#0284c7" fill-opacity="0.3" />
+      <rect x="96" y="45" width="32" height="24" rx="4" fill="#38bdf8" />
+      <text x="16" y="122" fill="#ffffff" font-family="sans-serif" font-size="11.5" font-weight="700">Wireless Noise-Canceling ANC</text>
+      <text x="16" y="138" fill="#64748b" font-family="sans-serif" font-size="9.5">SKU: PROD-8421 • Audio</text>
+      <text x="16" y="165" fill="#34d399" font-family="monospace" font-size="14" font-weight="700">$249.00</text>
+      <rect x="145" y="150" width="68" height="24" rx="4" fill="#0284c7" />
+      <text x="156" y="166" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="600">IN STOCK</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(262, 42)">
+      <rect width="225" height="195" rx="8" fill="#111c30" stroke="#253a5e" stroke-width="1" />
+      <rect x="12" y="12" width="201" height="90" rx="6" fill="#182744" />
+      <circle cx="112" cy="57" r="24" fill="#8b5cf6" fill-opacity="0.3" />
+      <rect x="98" y="43" width="28" height="28" rx="4" fill="#a855f7" />
+      <text x="16" y="122" fill="#ffffff" font-family="sans-serif" font-size="11.5" font-weight="700">Mechanical Keyboard RGB Pro</text>
+      <text x="16" y="138" fill="#64748b" font-family="sans-serif" font-size="9.5">SKU: PROD-1194 • Hardware</text>
+      <text x="16" y="165" fill="#34d399" font-family="monospace" font-size="14" font-weight="700">$179.00</text>
+      <rect x="145" y="150" width="68" height="24" rx="4" fill="#0284c7" />
+      <text x="156" y="166" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="600">IN STOCK</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(504, 42)">
+      <rect width="225" height="195" rx="8" fill="#111c30" stroke="#253a5e" stroke-width="1" />
+      <rect x="12" y="12" width="201" height="90" rx="6" fill="#182744" />
+      <circle cx="112" cy="57" r="24" fill="#10b981" fill-opacity="0.3" />
+      <polygon points="112,42 126,67 98,67" fill="#34d399" />
+      <text x="16" y="122" fill="#ffffff" font-family="sans-serif" font-size="11.5" font-weight="700">Smart Health Fitness Tracker</text>
+      <text x="16" y="138" fill="#64748b" font-family="sans-serif" font-size="9.5">SKU: PROD-3401 • Wearables</text>
+      <text x="16" y="165" fill="#34d399" font-family="monospace" font-size="14" font-weight="700">$129.00</text>
+      <rect x="145" y="150" width="68" height="24" rx="4" fill="#0284c7" />
+      <text x="156" y="166" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="600">IN STOCK</text>
+    </g>
+  </g>
+
+  <!-- Watermark Badge -->
+  <g transform="translate(670, 427)">
+    <rect x="0" y="0" width="105" height="16" rx="3" fill="#030712" fill-opacity="0.8" stroke="#334155" stroke-width="0.8" />
+    <text x="8" y="11" fill="#94a3b8" font-family="sans-serif" font-size="8" font-weight="500">PROJECT PREVIEW</text>
+  </g>
+</svg>

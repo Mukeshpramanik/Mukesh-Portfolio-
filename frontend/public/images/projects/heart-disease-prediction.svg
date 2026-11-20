@@ -1,0 +1,261 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas Gradients -->
+    <linearGradient id="cardioBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f24" />
+      <stop offset="50%" stop-color="#120e2a" />
+      <stop offset="100%" stop-color="#090a18" />
+    </linearGradient>
+
+    <!-- Chrome Header Gradient -->
+    <linearGradient id="cardioTopBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#161838" />
+      <stop offset="100%" stop-color="#21173d" />
+    </linearGradient>
+
+    <!-- Card Backgrounds -->
+    <linearGradient id="cardDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161a38" />
+      <stop offset="100%" stop-color="#10132b" />
+    </linearGradient>
+
+    <!-- Button & Accent Gradients -->
+    <linearGradient id="roseVioletGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="cyanBlueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <!-- Drop Shadows & Glows -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="windowShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="450" fill="url(#cardioBg)" />
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="160" cy="90" r="150" fill="#f43f5e" opacity="0.10" filter="url(#softGlow)" />
+  <circle cx="700" cy="380" r="160" fill="#8b5cf6" opacity="0.12" filter="url(#softGlow)" />
+
+  <!-- Main Application Window Container -->
+  <rect x="18" y="14" width="764" height="422" rx="12" fill="#0d1127" stroke="#262d54" stroke-width="1.2" filter="url(#windowShadow)" />
+
+  <!-- Window Header Bar -->
+  <rect x="18" y="14" width="764" height="46" rx="12" fill="url(#cardioTopBar)" />
+  <rect x="18" y="48" width="764" height="12" fill="url(#cardioTopBar)" />
+  <line x1="18" y1="60" x2="782" y2="60" stroke="#262d54" stroke-width="1" />
+
+  <!-- Window Controls -->
+  <circle cx="38" cy="37" r="4.5" fill="#ef4444" />
+  <circle cx="53" cy="37" r="4.5" fill="#f59e0b" />
+  <circle cx="68" cy="37" r="4.5" fill="#10b981" />
+
+  <!-- App Title & Icon -->
+  <g transform="translate(90, 27)">
+    <rect width="22" height="20" rx="5" fill="url(#roseVioletGrad)" />
+    <!-- Pulse icon in box -->
+    <path d="M4 10 L8 10 L10 6 L12 14 L14 8 L16 11 L18 10" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <text x="28" y="15" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="800" letter-spacing="0.5">CARDIOPULSE ML</text>
+    <text x="145" y="15" fill="#f472b6" font-family="sans-serif" font-size="9.5" font-weight="600">CLINICAL SUITE</text>
+  </g>
+
+  <!-- Patient ID Badge & Pipeline Status -->
+  <g transform="translate(480, 25)">
+    <rect width="165" height="25" rx="6" fill="#17112d" stroke="#4c1d95" stroke-width="0.8" />
+    <circle cx="12" cy="12.5" r="3.5" fill="#ec4899" />
+    <text x="22" y="16" fill="#f5d0fe" font-family="monospace" font-size="9.5" font-weight="600">COHORT: #MED-8492</text>
+
+    <!-- Supervised Model Status -->
+    <rect x="175" y="0" width="115" height="25" rx="6" fill="#064e3b" stroke="#059669" stroke-width="0.8" />
+    <circle cx="187" cy="12.5" r="3.5" fill="#34d399" />
+    <text x="196" y="16" fill="#a7f3d0" font-family="sans-serif" font-size="9.5" font-weight="700">MODEL ACTIVE</text>
+  </g>
+
+  <!-- TOP STRIP: Live Lead-II ECG Telemetry & Waveform -->
+  <g transform="translate(32, 70)">
+    <rect width="736" height="58" rx="8" fill="#111633" stroke="#262f59" stroke-width="1" />
+    
+    <!-- Heart Rate & Telemetry Label -->
+    <g transform="translate(18, 14)">
+      <text y="12" fill="#94a3b8" font-family="monospace" font-size="9.5" font-weight="600">CHEST LEAD V5 TELEMETRY</text>
+      <text y="32" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="800">72 BPM <tspan fill="#64748b" font-size="10" font-weight="500">• Sinus Rhythm</tspan></text>
+    </g>
+
+    <line x1="225" y1="10" x2="225" y2="48" stroke="#262f59" stroke-width="1" />
+
+    <!-- Waveform Path -->
+    <g transform="translate(240, 29)">
+      <!-- Grid line background for waveform -->
+      <line x1="0" y1="0" x2="475" y2="0" stroke="#1f294d" stroke-dasharray="3,3" stroke-width="1" />
+      
+      <!-- Pulsating Lead Path -->
+      <path d="M 0 0 L 40 0 L 48 -4 L 54 0 L 60 -18 L 68 18 L 74 -6 L 80 0 L 90 4 L 100 0 L 170 0 L 178 -4 L 184 0 L 190 -18 L 198 18 L 204 -6 L 210 0 L 220 4 L 230 0 L 300 0 L 308 -4 L 314 0 L 320 -18 L 328 18 L 334 -6 L 340 0 L 350 4 L 360 0 L 430 0 L 438 -4 L 444 0 L 450 -18 L 458 18 L 464 -6 L 475 0" 
+            fill="none" stroke="url(#pulseGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)" />
+      
+      <!-- Bright Core -->
+      <path d="M 0 0 L 40 0 L 48 -4 L 54 0 L 60 -18 L 68 18 L 74 -6 L 80 0 L 90 4 L 100 0 L 170 0 L 178 -4 L 184 0 L 190 -18 L 198 18 L 204 -6 L 210 0 L 220 4 L 230 0 L 300 0 L 308 -4 L 314 0 L 320 -18 L 328 18 L 334 -6 L 340 0 L 350 4 L 360 0 L 430 0 L 438 -4 L 444 0 L 450 -18 L 458 18 L 464 -6 L 475 0" 
+            fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
+    </g>
+  </g>
+
+  <!-- MAIN SECTION: TWO-COLUMN LAYOUT -->
+
+  <!-- LEFT COLUMN: Patient Biomarkers & Clinical Inputs -->
+  <g transform="translate(32, 138)">
+    <rect width="355" height="286" rx="8" fill="url(#cardDark)" stroke="#232a52" stroke-width="1" />
+    
+    <!-- Section Title -->
+    <g transform="translate(16, 18)">
+      <circle cx="5" cy="5" r="4" fill="#a855f7" />
+      <text x="16" y="8" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="11.5" font-weight="700">Patient Clinical Biomarkers</text>
+      <text x="16" y="22" fill="#64748b" font-family="sans-serif" font-size="9">Normalized features ingested for inference</text>
+    </g>
+
+    <!-- Field 1: Age & Sex -->
+    <g transform="translate(16, 52)">
+      <text y="0" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Age &amp; Sex</text>
+      <rect y="6" width="155" height="24" rx="5" fill="#0b0f24" stroke="#253059" stroke-width="0.8" />
+      <text x="10" y="22" fill="#f1f5f9" font-family="monospace" font-size="10">54 yrs • Male (1)</text>
+
+      <!-- Chest Pain Type -->
+      <text x="168" y="0" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Chest Pain Type</text>
+      <rect x="168" y="6" width="155" height="24" rx="5" fill="#0b0f24" stroke="#253059" stroke-width="0.8" />
+      <text x="178" y="22" fill="#e2e8f0" font-family="monospace" font-size="10">Type 2 (Atypical)</text>
+    </g>
+
+    <!-- Field 2: Resting BP -->
+    <g transform="translate(16, 96)">
+      <text y="0" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Resting Blood Pressure (trestbps)</text>
+      <text x="323" y="0" text-anchor="end" fill="#38bdf8" font-family="monospace" font-size="10" font-weight="700">132 mm Hg</text>
+      <rect y="6" width="323" height="7" rx="3.5" fill="#0b0f24" />
+      <rect y="6" width="210" height="7" rx="3.5" fill="#38bdf8" />
+    </g>
+
+    <!-- Field 3: Serum Cholesterol -->
+    <g transform="translate(16, 126)">
+      <text y="0" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Serum Cholesterol (chol)</text>
+      <text x="323" y="0" text-anchor="end" fill="#a78bfa" font-family="monospace" font-size="10" font-weight="700">224 mg/dl</text>
+      <rect y="6" width="323" height="7" rx="3.5" fill="#0b0f24" />
+      <rect y="6" width="175" height="7" rx="3.5" fill="#a78bfa" />
+    </g>
+
+    <!-- Field 4: Max HR -->
+    <g transform="translate(16, 156)">
+      <text y="0" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Max Heart Rate Achieved (thalach)</text>
+      <text x="323" y="0" text-anchor="end" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">168 bpm</text>
+      <rect y="6" width="323" height="7" rx="3.5" fill="#0b0f24" />
+      <rect y="6" width="248" height="7" rx="3.5" fill="#34d399" />
+    </g>
+
+    <!-- Field 5: ST Depression -->
+    <g transform="translate(16, 186)">
+      <text y="0" fill="#94a3b8" font-family="sans-serif" font-size="9.5">ST Depression Induced by Exercise (oldpeak)</text>
+      <text x="323" y="0" text-anchor="end" fill="#fbbf24" font-family="monospace" font-size="10" font-weight="700">0.8 mm</text>
+      <rect y="6" width="323" height="7" rx="3.5" fill="#0b0f24" />
+      <rect y="6" width="110" height="7" rx="3.5" fill="#fbbf24" />
+    </g>
+
+    <!-- Action Button: Run Inference -->
+    <g transform="translate(16, 222)">
+      <rect width="323" height="34" rx="6" fill="url(#roseVioletGrad)" filter="url(#softGlow)" opacity="0.9" />
+      <!-- Re-draw clean button surface over glow -->
+      <rect width="323" height="34" rx="6" fill="url(#roseVioletGrad)" />
+      <circle cx="112" cy="17" r="4" fill="#ffffff" />
+      <text x="124" y="21" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="11.5" font-weight="700">⚡ Execute ML Inference</text>
+      <text x="268" y="21" fill="#fce7f3" font-family="sans-serif" font-size="9.5">Scikit-Learn</text>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN: ML Diagnostic Assessment & Feature Attribution -->
+  <g transform="translate(402, 138)">
+    <rect width="366" height="286" rx="8" fill="url(#cardDark)" stroke="#232a52" stroke-width="1" />
+    
+    <!-- Assessment Output Banner -->
+    <g transform="translate(16, 14)">
+      <rect width="334" height="66" rx="7" fill="#081d19" stroke="#10b981" stroke-width="1.2" />
+      
+      <!-- Success Icon Circle -->
+      <circle cx="34" cy="33" r="16" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1" />
+      <path d="M27 33 L32 38 L41 28" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      
+      <!-- Text details -->
+      <text x="60" y="25" fill="#a7f3d0" font-family="-apple-system, sans-serif" font-size="11.5" font-weight="800">RISK STRATIFICATION: LOW RISK</text>
+      <text x="60" y="40" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Estimated Cardiac Event Probability:</text>
+      <text x="60" y="55" fill="#34d399" font-family="monospace" font-size="13" font-weight="800">14.8% <tspan fill="#6ee7b7" font-size="9" font-weight="500">• Model Confidence: High</tspan></text>
+    </g>
+
+    <!-- SHAP Feature Importance Breakdown -->
+    <g transform="translate(16, 92)">
+      <text y="0" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="700">Feature Attribution Weights (SHAP Analysis)</text>
+      <text x="334" y="0" text-anchor="end" fill="#64748b" font-family="sans-serif" font-size="8.5">Attribution %</text>
+
+      <!-- Bar 1: Thallium Stress -->
+      <g transform="translate(0, 14)">
+        <text y="9" fill="#94a3b8" font-family="monospace" font-size="9">thal (Thallium Stress)</text>
+        <rect x="150" y="1" width="145" height="10" rx="5" fill="#0b0f24" />
+        <rect x="150" y="1" width="116" height="10" rx="5" fill="#8b5cf6" />
+        <text x="334" y="9" text-anchor="end" fill="#c4b5fd" font-family="monospace" font-size="9">28%</text>
+      </g>
+
+      <!-- Bar 2: Chest Pain Type -->
+      <g transform="translate(0, 32)">
+        <text y="9" fill="#94a3b8" font-family="monospace" font-size="9">cp (Chest Pain Type)</text>
+        <rect x="150" y="1" width="145" height="10" rx="5" fill="#0b0f24" />
+        <rect x="150" y="1" width="100" height="10" rx="5" fill="#a855f7" />
+        <text x="334" y="9" text-anchor="end" fill="#d8b4fe" font-family="monospace" font-size="9">24%</text>
+      </g>
+
+      <!-- Bar 3: Max Heart Rate -->
+      <g transform="translate(0, 50)">
+        <text y="9" fill="#94a3b8" font-family="monospace" font-size="9">thalach (Max HR)</text>
+        <rect x="150" y="1" width="145" height="10" rx="5" fill="#0b0f24" />
+        <rect x="150" y="1" width="76" height="10" rx="5" fill="#06b6d4" />
+        <text x="334" y="9" text-anchor="end" fill="#67e8f9" font-family="monospace" font-size="9">18%</text>
+      </g>
+
+      <!-- Bar 4: Major Vessels -->
+      <g transform="translate(0, 68)">
+        <text y="9" fill="#94a3b8" font-family="monospace" font-size="9">ca (Major Vessels)</text>
+        <rect x="150" y="1" width="145" height="10" rx="5" fill="#0b0f24" />
+        <rect x="150" y="1" width="62" height="10" rx="5" fill="#10b981" />
+        <text x="334" y="9" text-anchor="end" fill="#6ee7b7" font-family="monospace" font-size="9">15%</text>
+      </g>
+
+      <!-- Bar 5: ST Depression -->
+      <g transform="translate(0, 86)">
+        <text y="9" fill="#94a3b8" font-family="monospace" font-size="9">oldpeak (ST Dep.)</text>
+        <rect x="150" y="1" width="145" height="10" rx="5" fill="#0b0f24" />
+        <rect x="150" y="1" width="48" height="10" rx="5" fill="#f59e0b" />
+        <text x="334" y="9" text-anchor="end" fill="#fde68a" font-family="monospace" font-size="9">11%</text>
+      </g>
+    </g>
+
+    <!-- Bottom Research Context Pill -->
+    <g transform="translate(16, 212)">
+      <rect width="334" height="26" rx="5" fill="#0a0d20" stroke="#252f58" stroke-width="0.8" />
+      <text x="10" y="17" fill="#818cf8" font-family="monospace" font-size="8.5">PIPELINE: Stratified 5-Fold Cross-Validation Ensemble</text>
+    </g>
+
+    <g transform="translate(16, 244)">
+      <circle cx="5" cy="5" r="3" fill="#64748b" />
+      <text x="14" y="8" fill="#64748b" font-family="sans-serif" font-size="8">Evaluation mockup • Decision-support ML benchmark model</text>
+    </g>
+  </g>
+</svg>
