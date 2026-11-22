@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     template: '%s | Mukesh Pramanik',
   },
   verification: {
-    google: '84DggSOTmG8nbIbuFJsn8_Qba7_DguoT7gHHJ-gb-Wk',
-  },
+  google: 'tFIvLIawHX3ZeUqhlkFyfCGgIgY2J1WK5N-L4EUp_pY',
+},
   description:
     'Portfolio of Mukesh Pramanik — B.Tech Computer Science Engineering student (2023–2027) focused on Data Analytics, Python, AI/ML, and Software Development.',
   keywords: [
