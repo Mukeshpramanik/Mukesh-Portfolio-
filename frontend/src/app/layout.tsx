@@ -23,11 +23,14 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://mukeshpramanik.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://mukeshpramanik.github.io/Mukesh-Portfolio-'
   ),
   title: {
     default: 'Mukesh Pramanik | B.Tech CSE | Data Analytics & Python Developer',
     template: '%s | Mukesh Pramanik',
+  },
+  verification: {
+    google: '84DggSOTmG8nbIbuFJsn8_Qba7_DguoT7gHHJ-gb-Wk',
   },
   description:
     'Portfolio of Mukesh Pramanik — B.Tech Computer Science Engineering student (2023–2027) focused on Data Analytics, Python, AI/ML, and Software Development.',
@@ -61,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://github.com/Mukeshpramanik',
+    url: 'https://mukeshpramanik.github.io/Mukesh-Portfolio-',
     title: 'Mukesh Pramanik | B.Tech CSE | Data Analytics & Python Developer',
     description:
       'Portfolio of Mukesh Pramanik — B.Tech Computer Science Engineering student (2023–2027) focused on Data Analytics, Python, AI/ML, and Software Development.',
@@ -96,6 +99,7 @@ export const metadata: Metadata = {
     ],
   },
 };
+
 
 export default function RootLayout({
   children,
